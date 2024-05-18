@@ -1,0 +1,72 @@
+<!-- <div>
+    <h2>Registration Form</h2>
+    <form [formGroup]="Bankform" (ngSubmit)="addUser()"  >
+      <div class="card p-2">
+        <div class="card-body"><h4>CRUD Operation</h4></div>
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label for="a">Name</label>
+              <input type="text" name="a" id="a" class="form-control" formControlName="name">
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label for="b">Branch</label>
+              <input type="text" name="b" id="b" class="form-control" formControlName="branch">
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label for="c">Category</label>
+              <input type="text" name="c" id="c" class="form-control" formControlName="category">
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label for="c">Image</label>
+              <input type="file" name="c" id="c" class="form-control" formControlName="imageFileName">
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-primary m-2" type="submit" [disabled]="Bankform.invalid">Register</button>
+    </form>
+    <button class="btn btn-success m-2" (click)="update()" >Update</button>
+  </div>
+  
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Branch</th> 
+        <th scope="col">Category</th>
+        <th scope="col">ImageFileName</th> 
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.branch }}</td>
+        <td>{{ user.category }}</td> 
+        <td>{{ user.imageFileName }}</td> 
+        <td>
+         <button class="btn btn-info m-2" (click)="updateUser(user)" >Edit</button>
+          <button class="btn btn-danger" (click)="deleteUser(user)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table> -->
+  <div>
+    <h2>Upload File</h2>
+    <form (submit)="onSubmit()" enctype="multipart/form-data">
+      <input type="file" (change)="onFileSelected($event)" />
+      <button type="submit">Upload</button>
+    </form>
+  </div>
+   
+
+  

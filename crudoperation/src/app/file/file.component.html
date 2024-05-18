@@ -1,0 +1,41 @@
+<form [formGroup]="registrationForm" (ngSubmit)="addUser()">
+    <label>Name:</label>
+    <input type="text" formControlName="name" required>
+  
+    <label>Email:</label>
+    <input type="email" formControlName="gmail" required>
+  
+    <label>Mobile:</label>
+    <input type="text" formControlName="mobile" required>
+  
+    <label>File:</label>
+    <input type="file" (change)="onFileChange($event)" accept=".pdf,.doc,.docx" required>
+  
+    <button type="submit">Add User</button>
+  </form>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Username</th>
+        <th scope="col">Email</th>
+        <th scope="col">Mobile</th> 
+        <th scope="col">File</th> 
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.gmail }}</td>
+        <td>{{ user.mobile }}</td> 
+        <td>{{ user.file }}</td> 
+        <td>
+         <!-- <button class="btn btn-info m-2" (click)="updateUser(user)" >Edit</button> -->
+          <!-- <button class="btn btn-danger" (click)="deleteUser(user)">Delete</button> -->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  

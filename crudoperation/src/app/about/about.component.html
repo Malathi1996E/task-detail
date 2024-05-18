@@ -1,0 +1,57 @@
+<div class="container">
+  <h3 class="text-primary text-center">Angular file upload & download</h3>
+  <hr />
+</div>
+<div class="container">
+  <div class="card p-2">
+    <form [formGroup]="fileForm" (ngSubmit)="save()"> 
+      <div class="card-body">
+        <h4> Operation</h4>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label class="">UserName</label>
+            <input class="form-control" type="text" formControlName="userName" />
+          </div>
+        </div>
+      <div class="col">
+          <div class="form-group">
+            <label for="file">Image</label>
+            <input class="form-control" type="file" (change)="onFileSelected($event)" formControlName="file"/>
+          </div>
+        </div>
+      <div class="col">
+          <div class="form-group">
+            <label for="file">File</label>
+            <input class="form-control" type="file"  (change)="onFileSelected($event)" />
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary p-2">Save</button>
+    </form>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Image</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of userList; index as i">
+          <td>{{ user.userName }}</td>
+          <td><img class="card-img-top" style="height: 50px; width: 50px;" [src]="'data:image/png;base64,' + user.displayPicture" alt="Image" /></td>
+          <td>
+            <button class="btn btn-primary m-2" (click)="editUser(i)">Edit</button>
+            <button class="btn btn-danger" (click)="deleteUser(user.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

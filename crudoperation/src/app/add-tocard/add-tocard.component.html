@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="image-container" *ngFor="let image of availableImages">
+    <img [src]="image" alt="Image">
+    <button class="add-to-cart-btn" (click)="addToCart(image)">Add to Cart</button>
+  </div>
+</div>
+
+<div *ngIf="selectedImages.length > 0" class="selected-images-container">
+  <div *ngIf="showImages" class="selected-images-container">
+    <h2>Selected Images</h2>
+    <div>
+      <img [src]="image" *ngFor="let image of selectedImages" alt="Selected Image">
+    </div>
+  </div>
+  <button class="count-btn" (click)="navigateToSelectImage()">
+    <img src="assets/images.png" alt="Cart Icon" width="30" height="30">
+    {{ selectedImages.length }} 
+  </button>
+</div>
