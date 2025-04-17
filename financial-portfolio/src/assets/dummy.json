@@ -1,0 +1,39 @@
+{
+  "investments": [
+    {
+      "id": "1",
+      "assetType": "Stocks",
+      "quantity": 10,
+      "purchasePrice": 500,
+      "purchaseDate": "2024-01-01"
+    },
+    {
+      "id": "2",
+      "assetType": "Bonds",
+      "quantity": 5,
+      "purchasePrice": 300,
+      "purchaseDate": "2024-03-01"
+    },
+    {
+      "id": "bf31",
+      "assetType": "Real Estate",
+      "quantity": 100,
+      "purchasePrice": 120,
+      "purchaseDate": "2025-04-23"
+    },
+    {
+      "id": "decc",
+      "assetType": "Stocks",
+      "quantity": 100,
+      "purchasePrice": 130,
+      "purchaseDate": "2025-04-17"
+    },
+    {
+      "id": "def8",
+      "assetType": "Stocks",
+      "quantity": 12,
+      "purchasePrice": 12345,
+      "purchaseDate": "2025-03-12"
+    }
+  ]
+}

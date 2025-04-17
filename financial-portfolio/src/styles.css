@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+/* Responsive layout */
+@media screen and (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
+  .charts {
+    flex-direction: column;
+  }
+  .charts div {
+    width: 100%;
+  }
+}
+
+.dashboard {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.charts {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #45a049;
+}

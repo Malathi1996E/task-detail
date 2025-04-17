@@ -1,0 +1,20 @@
+<div class="dashboard">
+    <h2>Portfolio Overview</h2>
+    <div class="charts">
+        <div style="width: 300px">
+            <canvas baseChart [data]="{ labels: assetChartLabels, datasets: [{ data: assetChartData }] }"
+                [type]="assetChartType">
+            </canvas>
+
+        </div>
+        <div style="width: 500px">
+            <canvas baseChart
+            [datasets]="lineChartData"
+            [labels]="lineChartLabels"
+            [type]="'line'">
+          </canvas>          
+
+
+        </div>
+    </div>
+</div>

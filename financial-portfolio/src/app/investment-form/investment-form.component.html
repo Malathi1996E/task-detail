@@ -1,0 +1,28 @@
+<form [formGroup]="investmentForm" (ngSubmit)="submitForm()">
+    <label>Asset Type:
+      <select formControlName="assetType">
+        <option value="">Select</option>
+        <option>Stocks</option>
+        <option>Bonds</option>
+        <option>Real Estate</option>
+      </select>
+    </label>
+    <div *ngIf="submitted && investmentForm.controls.assetType.errors">Asset Type is required</div>
+  
+    <label>Quantity:
+      <input type="number" formControlName="quantity" />
+    </label>
+    <div *ngIf="submitted && investmentForm.controls.quantity.errors">Valid quantity required</div>
+  
+    <label>Purchase Price:
+      <input type="number" formControlName="purchasePrice" />
+    </label>
+    <div *ngIf="submitted && investmentForm.controls.purchasePrice.errors">Valid price required</div>
+  
+    <label>Purchase Date:
+      <input type="date" formControlName="purchaseDate" />
+    </label>
+    <div *ngIf="submitted && investmentForm.controls.purchaseDate.errors">Date is required</div>
+  
+    <button type="submit">Submit</button>
+  </form>
